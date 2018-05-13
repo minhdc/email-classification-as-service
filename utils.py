@@ -8,23 +8,30 @@ from emailclassification import get_eml_header,get_eml_header_value_by_key
 
 
 def get_email_address_from_obfuscated_string(input_string):
-    print("raw add input string: ",input_string
-    )
+    print("raw add input string: ",input_string)
+    '''
     first_refine = input_string.replace(" ","")
-    first_refine = first_refine.replace("\n","")
+    first_refine = input_string.replace("\n","")
     first_refine = first_refine.replace("\t","")
-
+    second_refine = first_refine.split(' ')
+    
+    for each_thing in second_refine:
+        if len(each_thing) <= 1:
+            second_refine.remove(each_thing)
+        if '@' not in each_thing:
+            second_refine.remove(each_thing)
+    '''
     list_of_addr = re.findall(r"<(.*?)>",input_string)
     print("after regexing...",list_of_addr)
-    second_refine = first_refine.split(',')
-    print("second refine ",second_refine)
+    
+    '''print("second refine ",second_refine)
     for each_addr in second_refine:
         #if '<' in each_addr:
             each_addr = re.findall(r"<(.*?)>",each_addr)
     print("after second refine : ",second_refine)
     print("then regex: ",list_of_addr)
-    if len(second_refine) == len(list_of_addr):
-        return list_of_addr
+    if len(second_refine) == len(list_of_addr):'''
+    return list_of_addr
     
     
         
@@ -52,13 +59,14 @@ def copy_eml_file_to_storing_folder(src_included_eml_file_name,dst):
 
 
 def get_current_dir_list(curren_path):
-    result = [os.path.join(curren_path,x) for x in os.listdir(curren_path)]
+    result = [os.path.join(curren_path,x) for x in os.listdir(curren_path)]    
     return result
 
 
 def do_the_classification_job(eml_file_path):
 
     list_of_current_file = get_current_dir_list(eml_file_path)
+    print("list of current file ",list_of_current_file)
     #print("list of current eml file",list_of_current_file)
     for each_file in list_of_current_file:
         eml_header = get_eml_header(each_file)

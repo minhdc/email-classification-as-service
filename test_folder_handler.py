@@ -6,17 +6,19 @@ from MyFolderChangingHandler import MyFolderChangingHandler
 from utils import get_current_dir_list
 from watchdog.observers import Observer
 
+
+
 if __name__ == '__main__':
     print("shit")
-    setttings.folder_watch_list = get_current_dir_list(setttings.SRC_DIR)
-    #print(setttings.folder_watch_list)
+    setttings.folder_watch_list = get_current_dir_list(setttings.SRC_DIR)    
     args = sys.argv[1:]
     observer = Observer()
     observer.schedule(MyFolderChangingHandler(), path = args[0])
     observer.start()
-    toggle = True
+    #grab_all_current_folder_into_watchlist(setttings.folder_watch_list)
+    #toggle = True
     
-    try:
+    try: 
         while True:
             time.sleep(1)          
             
