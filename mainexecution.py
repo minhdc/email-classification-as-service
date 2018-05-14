@@ -9,15 +9,16 @@ import MyFolderChangingHandler
 
 
 def invoke_file_changing_handler(target_folder_path):
-    if target_folder_path in setttings.folder_watch_list:
-        do_the_classification_job(target_folder_path)
-        print("done the classifcation job on modified folder",target_folder_path)
-    else:
-        print("%r is not in the current watchlist")
+    if target_folder_path not in setttings.folder_watch_list:
+        setttings.folder_watch_list.append(target_folder_path)
+    do_the_classification_job(target_folder_path)
+    print("done the classifcation job on modified folder",target_folder_path)
     #pass
 
 
 def invoke_file_changing_handler_on_new_folder(target_folder_path):
+    if target_folder_path not in setttings.folder_watch_list:
+        setttings.folder_watch_list.append(target_folder_path)
     do_the_classification_job(target_folder_path)
     print("done the classification job on new folder",target_folder_path)
 
