@@ -8,3 +8,10 @@ OUTPUT_DIR_NAME = os.path.basename(DST_DIR)
 
 folder_watch_list = [""]
 
+CONFIG_FILE_LOC = "D:\\email-classification-as-service\\"
+CONFIG_FILE_SUFFIX = ["*.txt"]
+CONFIG_FILE_CHANGED = False
+
+STATUS = False
+
+EMAIL_COUNT_FOR_CURRENT_SESSION = 0

@@ -1,0 +1,21 @@
+missing module named resource - imported by posix, D:\email-classification-as-service\testroothandler.py
+missing module named posix - imported by os, D:\email-classification-as-service\testroothandler.py
+missing module named _posixsubprocess - imported by subprocess, D:\email-classification-as-service\testroothandler.py
+missing module named org - imported by pickle, D:\email-classification-as-service\testroothandler.py
+missing module named readline - imported by cmd, code, pdb, D:\email-classification-as-service\testroothandler.py
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, D:\email-classification-as-service\testroothandler.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, D:\email-classification-as-service\testroothandler.py
+missing module named _winreg - imported by platform, D:\email-classification-as-service\testroothandler.py
+missing module named _scproxy - imported by urllib.request
+missing module named java - imported by platform, D:\email-classification-as-service\testroothandler.py
+missing module named 'java.lang' - imported by platform, D:\email-classification-as-service\testroothandler.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, D:\email-classification-as-service\testroothandler.py
+missing module named termios - imported by tty, D:\email-classification-as-service\testroothandler.py, getpass
+missing module named grp - imported by shutil, tarfile, D:\email-classification-as-service\testroothandler.py
+missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, D:\email-classification-as-service\testroothandler.py, netrc, getpass
+missing module named _dummy_threading - imported by dummy_threading, D:\email-classification-as-service\testroothandler.py
+missing module named 'org.python' - imported by copy, D:\email-classification-as-service\testroothandler.py, xml.sax
+missing module named win32stat - imported by watchdog.utils
+missing module named Queue - imported by watchdog.utils.compat
+missing module named select_backport - imported by watchdog.observers.kqueue
+missing module named _watchdog_fsevents - imported by watchdog.observers.fsevents
